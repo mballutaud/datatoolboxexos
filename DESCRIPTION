@@ -1,7 +1,7 @@
 Package: datatoolboxexos
 Title: Data and Code for the exercice of RC
 Version: 0.0.0.9000
-Authors@R:  
+Authors@R: 
     person(given = "Marine",
            family = "Ballutaud",
            role = c("aut", "cre"),
@@ -13,3 +13,6 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    here,
+    readr
