@@ -1,15 +1,20 @@
 ---
 title: "Exercice dplyr"
 author: "marine.ballutaud@univ-lille.fr"
-date: "03/11/2020" #'Sys.Date()' #à la date de la compilation
+date: "03/11/2020" #'r Sys.Date()' #à la date de la compilation
 output: 
-  html_document
-    keep_md: yes
+  html_document:
+    keep_md: no #fichier intermédiaire pour passer du Rmd au html besoin du md, si ça fonctionne pas besoin de le garder donc keep_md=no sinon yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+devtools::load_all() #importe les fonctions du package R à chaque compil du rmd!!!!
+```
+
 
 # Introduction
 
