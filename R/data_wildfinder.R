@@ -18,7 +18,7 @@ data_ecoregion <- function() { #pas de parametres
 #' @export
 #'
 
-data_ecoregion <- function() { #pas de parametres
+data_mammals <- function() { #pas de parametres
   ob <- readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-mammals_list.csv"))
   #here donne le chemin du dataset, on est a la racine
   #readr fabrique des tables
@@ -31,7 +31,7 @@ data_ecoregion <- function() { #pas de parametres
 #' @export
 #'
 
-data_ecoregion <- function() { #pas de parametres
+data_species <- function() { #pas de parametres
   ob <- readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-ecoregion_species.csv"))
   #here donne le chemin du dataset, on est a la racine
   #readr fabrique des tables

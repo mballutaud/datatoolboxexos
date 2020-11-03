@@ -5,22 +5,10 @@
 \title{Get data ecoregion}
 \usage{
 data_ecoregion()
-
-data_ecoregion()
-
-data_ecoregion()
 }
 \value{
 data.frame with info on ecoregion
-
-data.frame with info on mammals
-
-data.frame with info on species
 }
 \description{
 Get data ecoregion
-
-Get data mammals
-
-Get data species
 }
