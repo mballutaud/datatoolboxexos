@@ -1,8 +1,10 @@
 ---
 title: "Exercice dplyr"
-author: "Marine B."
-date: "03/11/2020"
-output: html_document
+author: "marine.ballutaud@univ-lille.fr"
+date: "03/11/2020" #'Sys.Date()' #à la date de la compilation
+output: 
+  html_document
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}

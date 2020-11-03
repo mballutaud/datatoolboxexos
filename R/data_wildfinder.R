@@ -6,7 +6,7 @@
 #'
 
 data_ecoregion <- function() { #pas de parametres
-  ob <- readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-ecoregions_list.csv"))
+  readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-ecoregions_list.csv"))
   #here donne le chemin du dataset, on est a la racine
   #readr fabrique des tables
   #read_csv pour les doc en csv
@@ -23,6 +23,7 @@ data_mammals <- function() { #pas de parametres
   #here donne le chemin du dataset, on est a la racine
   #readr fabrique des tables
   #read_csv pour les doc en csv
+  return(ob)
 }
 
 #' Get data species
@@ -32,7 +33,7 @@ data_mammals <- function() { #pas de parametres
 #'
 
 data_species <- function() { #pas de parametres
-  ob <- readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-ecoregion_species.csv"))
+  readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-ecoregions_species.csv"))
   #here donne le chemin du dataset, on est a la racine
   #readr fabrique des tables
   #read_csv pour les doc en csv
