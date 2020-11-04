@@ -1,0 +1,48 @@
+---
+title: "Exercice ggplot2"
+author: "Marine B."
+date: "04/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse) #si pas de make alors besoin de la library
+```
+
+## Tidy the dataset
+```{r data, echo=FALSE, include=FALSE}
+#load data
+#pantheria <- readr::read_delim("../data/pantheria-traits/PanTHERIA_1-0_WR05_Aug2008.txt", delim = "\t")
+pantheria_raw <- readr::read_delim(here::here("data", "pantheria-traits", "PanTHERIA_1-0_WR05_Aug2008.txt"), delim = "\t")
+#Transform MSW05_Order and MSW05_Family columns in factors
+pantheria <- pantheria_raw %>%
+  mutate(                  # Conversion de type
+    order   = as_factor(MSW05_Order),
+    family  = as_factor(MSW05_Family)
+  ) %>% janitor::clean_names() #enlève espace et met des _ entre les mots et tout en minuscule
+#Select a few columns for convenience, and at least: family, order, longevity, home range and litter size
+str(pantheria) #pour voir la structure
+new_pantheria <- pantheria %>%
+  rename( longevity = x17_1_max_longevity_m ) %>% 
+  select(family, order, longevity) 
+View(new_pantheria)
+#Replace -999 by NA (hint: check out na_if() function)
+new_pantheria_na <- new_pantheria %>% 
+  mutate(longevity=na_if(longevity, -999)) %>% 
+  view() #autre mth de view
+#View(new_pantheria_na)
+
+
+```
+
+```{r view data}
+#Print out the dataset
+new_pantheria_na
+
+```
+
+
+
+## Graphes
+
